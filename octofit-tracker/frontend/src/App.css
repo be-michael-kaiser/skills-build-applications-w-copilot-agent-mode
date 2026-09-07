@@ -1,0 +1,173 @@
+.app-shell {
+  min-height: 100svh;
+}
+
+.app-header {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  padding: 18px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  align-items: center;
+  color: var(--text-h);
+  display: inline-flex;
+  font-family: var(--heading);
+  font-size: 22px;
+  font-weight: 700;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand img {
+  height: 42px;
+  width: 42px;
+}
+
+.app-header .nav {
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.app-header .nav-link {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.app-header .nav-link.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.content-wrap {
+  padding: 32px;
+}
+
+.api-banner {
+  align-items: center;
+  background: #eef7f0;
+  border: 1px solid #c9e7d0;
+  border-radius: 8px;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding: 12px 14px;
+  text-align: left;
+}
+
+.api-banner span {
+  color: #1b6b3a;
+  font-weight: 800;
+}
+
+.api-banner code {
+  background: transparent;
+  padding: 0;
+  word-break: break-all;
+}
+
+.page-section {
+  text-align: left;
+}
+
+.section-heading {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 22px;
+}
+
+.panel h2 {
+  font-size: 24px;
+}
+
+.metric-list {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0 0;
+}
+
+.metric-list div {
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+
+.metric-list dt {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.metric-list dd {
+  color: var(--text-h);
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.stat-card {
+  display: grid;
+  gap: 6px;
+}
+
+.rank {
+  color: var(--accent);
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.stat-card strong {
+  color: var(--text-h);
+  font-size: 28px;
+}
+
+.stat-card small {
+  color: var(--text);
+}
+
+.exercise-list {
+  margin: 18px 0 0;
+  padding-left: 18px;
+}
+
+.exercise-list li + li {
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .app-header .nav {
+    justify-content: flex-start;
+  }
+
+  .content-wrap {
+    padding: 20px 16px;
+  }
+}
