@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { fetchCollection } from '../lib/api.js'
 
+const leaderboardEndpoint = '/api/leaderboard/'
+
 function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([])
   const [status, setStatus] = useState('loading')
@@ -11,7 +13,7 @@ function Leaderboard() {
 
     async function loadLeaderboard() {
       try {
-        const data = await fetchCollection('leaderboard')
+        const data = await fetchCollection('leaderboard', leaderboardEndpoint)
 
         if (!ignore) {
           setLeaderboard(data)
