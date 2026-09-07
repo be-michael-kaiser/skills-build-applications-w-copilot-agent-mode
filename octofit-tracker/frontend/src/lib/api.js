@@ -26,7 +26,8 @@ export function normalizeCollection(payload, collectionName) {
 
 export async function fetchCollection(collectionName, endpointPath = `/${collectionName}/`) {
   const apiPath = endpointPath.replace(/^\/?api\/?/, '')
-  const response = await fetch(`${apiBaseUrl}/${apiPath}`)
+  const endpointUrl = endpointPath.startsWith('http') ? endpointPath : `${apiBaseUrl}/${apiPath}`
+  const response = await fetch(endpointUrl)
 
   if (!response.ok) {
     throw new Error(`Request failed with ${response.status}`)
